@@ -11,5 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [RouterOutlet, NavBarComponent, FooterComponent],
 })
 export class AppComponent {
+  const userInput = '<script>alert("XSS")</script>';
+document.getElementById('output').innerHTML = userInput;
   title = 'Auth0 Angular SDK Sample';
 }
